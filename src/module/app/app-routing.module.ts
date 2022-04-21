@@ -6,6 +6,9 @@ const routes: Routes = [
   {
     path: 'dev', component: DevComponent
   },
+  {
+    path: '**', component: DevComponent
+  },
 ];
 
 @NgModule({

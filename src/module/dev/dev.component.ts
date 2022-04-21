@@ -1,4 +1,8 @@
 import {Component, OnInit} from '@angular/core';
+import {SocialMediaPostService} from "../data/service/social-media-post.service";
+import {Observable} from "rxjs";
+import {SocialMediaPost} from "../data/model/SocialMediaPost";
+import {StringFilter} from "../data/model/StringFilter";
 
 @Component({
   selector: 'app-dev',
@@ -7,10 +11,15 @@ import {Component, OnInit} from '@angular/core';
 })
 export class DevComponent implements OnInit {
 
-  constructor() {
+  data?: Observable<SocialMediaPost[]>;
+
+  constructor(private service:SocialMediaPostService) {
+
   }
 
   ngOnInit(): void {
+    this.data = this.service.getAll({filter: ["DEV"]} as StringFilter);
   }
+
 
 }

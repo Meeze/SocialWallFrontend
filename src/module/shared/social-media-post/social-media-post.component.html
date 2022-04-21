@@ -1,0 +1,14 @@
+<div class="post">
+  <div class="post-image">
+    <img src="{{post?.image?.url}}" alt="{{post?.image?.alt}}">
+  </div>
+  <div class="post-info">
+    <div *ngIf="post?.text" class="post-text">
+      <span>{{post?.text}}</span>
+    </div>
+    <div class="post-poster">
+      <span>{{post?.accountName}}</span>
+      <!--span>{{post?.platform}}</span!-->
+    </div>
+  </div>
+</div>

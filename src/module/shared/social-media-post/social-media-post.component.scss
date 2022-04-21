@@ -1,0 +1,44 @@
+@import "src/styles";
+
+.post {
+  display: flex;
+  flex-flow: column;
+  background: white;
+  border: 1px solid $udg-gray2;
+  border-top: none;
+  border-bottom-width: 4px;
+
+  .post-image  {
+    height: 50%;
+    display: flex;
+    img {
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+
+  .post-info {
+    height: 50%;
+    display: flex;
+    flex-flow: column;
+
+    .post-text {
+      height: 80%;
+      margin: 5%;
+      width: auto;
+      font-weight: 300;
+      font-size: 1.3rem;
+      line-height: 1.5;
+    }
+
+    .post-poster {
+      height: 20%;
+      display: flex;
+      align-items: center;
+      column-gap: 2.5%;
+      padding-left: 5%;
+      padding-bottom: 5%;
+    }
+  }
+}
